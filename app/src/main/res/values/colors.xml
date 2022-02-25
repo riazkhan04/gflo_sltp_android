@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#3A862A</color> ///B9BBBD
+    <color name="colorBackground">#357126</color>
+    <color name="colorSplashText">#FFFFFF</color>
+    <color name="colorProgressBar">#b00020</color>
+    <color name="colorTextView">#83898E</color>
+    <color name="colorbutton">#022A67</color>
+
+    <color name="color1">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#fff</color>
+    <color name="grey">#939393</color>
+
+    <color name="cardback">#44BBB4B4</color>
+    <color name="cardback1">#e0e0e0</color>
+    <color name="spinner_hint_text_color">#ffffcc</color>
+    <color name="text_color_black">#000000</color>
+    <color name="offwhite">#fafafa</color>
+
+
+    <color name="range">#0070b0</color>
+    <color name="fb">#3cbdd0</color>
+    <color name="tp">#f0272c</color>
+    <color name="sp">#e68e24</color>
+    <color name="profile">#4ba61b</color>
+    <color name="exportcolor">#008b00</color>
+    <color name="transparent_white">#A8E6E0E0</color>
+
+    <!--#057d2b-->
+
+</resources>

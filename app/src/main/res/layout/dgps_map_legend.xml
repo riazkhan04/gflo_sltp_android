@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name_textView"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_weight="1"
+        android:background="@color/colorBackground"
+        android:drawableLeft="@drawable/ic_view_list_black_24dp"
+        android:drawableRight="@drawable/ic_close_black_24dp"
+        android:drawablePadding="5dp"
+        android:drawableTint="#fff"
+
+        android:fontFamily="@font/my_custom_font"
+        android:gravity="left|center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Legend"
+        android:textColor="#fff"
+        android:textSize="18dp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:layout_below="@+id/name_textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/stateLegend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="15dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/yellow" />
+
+                <TextView
+                    android:id="@+id/textStateBoundary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/my_custom_font"
+                    android:text="Unsurveyed Existing Point"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgpropose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="15dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/blue" />
+
+                <TextView
+                    android:id="@+id/txtPropose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/my_custom_font"
+                    android:text="Unsurveyed Propose Point"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/distLegend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="15dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/red" />
+
+                <TextView
+                    android:id="@+id/textDistrictBoundary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/my_custom_font"
+                    android:text="Ponits having only attribute data"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ulbLegend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="15dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/green" />
+
+                <TextView
+                    android:id="@+id/textUlbBoundary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/my_custom_font"
+                    android:text="Points having attribute,Static and RTX data"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgNoSurvey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="15dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/map_grey" />
+
+                <TextView
+                    android:id="@+id/txtNoSurvey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/my_custom_font"
+                    android:text="Points which are not feasible for Survey"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgReject"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="15dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/reject_marker" />
+
+                <TextView
+                    android:id="@+id/txtReject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dip"
+                    android:fontFamily="@font/my_custom_font"
+                    android:text="Points which are Rejected"
+                    android:textColor="#000000" />
+
+                <CheckBox
+                    android:id="@+id/checkReject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="true"
+                    android:layout_marginLeft="10dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgCommon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="15dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/coomon_marker" />
+
+                <TextView
+                    android:id="@+id/txtCommon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/my_custom_font"
+                    android:text="Common Pillar"
+                    android:textColor="#000000" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

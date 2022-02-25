@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sparc.frjvcapp">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
+    <!--  For opening from one app to another use queries with package-->
+    <queries>
+        <package android:name="SurveyMobile.Droid" />
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/black_tree"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/black_tree"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Resurvey"></activity>
+        <activity android:name=".Help" />
+        <activity
+            android:name=".WebViewPage"
+            android:hardwareAccelerated="false" />
+        <activity android:name=".RevisitDGPSJXLDataExportActivity" />
+        <activity android:name=".RevisitDGPSRTXDataExportActivity" />
+        <activity android:name=".RevisitDGPSStaticDataExportActivity" />
+        <activity android:name=".RevisitDGPSDataTaggMenuActivity" />
+        <activity android:name=".RevisitDGPSViewPillarDetailActivity" />
+        <activity android:name=".RevisitDGPSDataCollectActivity" />
+        <activity android:name=".RevisitDGPSSyncMenuActivity" />
+        <activity android:name=".RevisitDGPSMapViewActivity" />
+        <activity android:name=".RevisitDGPSDataViewActivity" />
+        <activity android:name=".RevisitDGPSSurveyMenuActivity" />
+        <activity android:name=".DGPSJXLDataExportActivity" />
+        <activity android:name=".DGPSDataTaggMenuActivity" />
+        <activity android:name=".DFPSRTXDataExportActivity" />
+        <activity android:name=".DGPSSyncMenuActivity" />
+        <activity android:name=".DGPSViewPillarDetailActivity" />
+        <activity android:name=".DGPSMapViewActivity" />
+        <activity android:name=".DGPSDataExportActivity" />
+        <activity android:name=".DGPSDataViewActivity" />
+        <activity android:name=".ChooseSurvetTypeActivity" />
+        <activity android:name=".UpdateSurveyPillarPointDataActivity" />
+        <activity
+            android:name=".DGPSDataCollectActivity"
+            android:configChanges="orientation|screenSize">
+<!--            <intent-filter>-->
+<!--                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <activity android:name=".SelectFBForDGPSActivity" />
+        <activity android:name=".StoreShiftingPillarDataActivity" />
+        <activity android:name=".MapViewerActivity" />
+        <activity android:name=".MainContainerActivity" />
+        <activity android:name=".ListDataViewActivity" />
+        <activity android:name=".UpdatePillarPointDataActivity" />
+        <activity android:name=".MiddleMapListActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".RegisterPointActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"
+            />
+<!--        Adding screensize in configChanges make camera ok-->
+
+        <activity android:name=".ListMapActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".SearchMapFile" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/ApiKey" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name=".ImageService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="service"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".MyNotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

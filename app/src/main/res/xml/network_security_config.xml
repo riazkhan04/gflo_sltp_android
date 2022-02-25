@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+<domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">103.55.73.1695</domain>
+    <domain includeSubdomains="true">http://odishaforestlandsurvey.in</domain>
+</domain-config>
+</network-security-config>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Filter layout-->
+    <LinearLayout
+        android:id="@+id/sync_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Syncing Images"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginBottom="15dp"/>
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/close_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_close_black_24dp"
+        android:layout_alignParentRight="true"
+        android:padding="3dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="8dp"
+        app:tint="@color/white" />
+
+
+    <!--    Progess LL-->
+    <LinearLayout
+        android:id="@+id/progress_bar_LL"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/sync_LL"
+        android:gravity="center"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+
+            <ProgressBar
+                style="@style/AppTheme"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/colorPrimary"
+                android:progressDrawable="@color/white"
+                android:progressTint="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/progress_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/text_color_black"
+            android:background="@color/white"
+            android:text="Loading...Please wait for image sync !"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
